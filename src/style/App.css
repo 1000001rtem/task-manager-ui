@@ -1,0 +1,90 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #e0e0e0;
+}
+
+#root {
+    height: 100%;
+}
+
+.wrap {
+    height: 100%;
+}
+
+.view {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    min-height: 130px;
+}
+
+.header .container {
+    background-color: #D9361D;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .container .menuPanel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header .container .menuPanel a {
+    color: white;
+    font-weight: bold;
+}
+
+.header .container .menuPanel a:hover {
+    color: #8D1B09;
+}
+
+.content {
+    flex: 1 0 auto;
+    min-height: 100px;
+}
+
+.content .container {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .container .greetingsContainer .imageBox {
+    display: flex;
+    justify-content: center;
+}
+
+.content .container .greetingsContainer .imageBox img {
+    width: 150px;
+    height: 150px;
+}
+
+.footer {
+    flex: 0 0 auto;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.footer .container {
+    background-color: #8D1B09;
+    height: 100%;
+}
+
+/*# sourceMappingURL=App.css.map */

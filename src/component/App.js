@@ -1,10 +1,12 @@
 import React from 'react';
 import '../style/App.css';
-import MainView from "./MainView";
+import MainView from "./view/MainView";
 
 function App() {
     return (
-        <MainView/>
+        <div className={"wrap"}>
+            <MainView/>
+        </div>
     );
 }
 

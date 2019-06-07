@@ -1,0 +1,96 @@
+@headerBackgroundColor: #D9361D;
+@footerBackgroundColor: #8D1B09;
+@bodyBackgroundColor: #e0e0e0;
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: @bodyBackgroundColor;
+}
+
+#root {
+  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+}
+
+.view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  min-height: 130px;
+
+  .container {
+    background-color: @headerBackgroundColor;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+
+    .menuPanel {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      font-size: 18px;
+
+      a {
+        &:hover {
+          color: #8D1B09;
+        }
+
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.content {
+  flex: 1 0 auto;
+  min-height: 100px;
+
+  .container {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .greetingsContainer {
+
+      .imageBox {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  flex: 0 0 auto;
+  height: 50px;
+  margin-bottom: 10px;
+
+  .container {
+    background-color: @footerBackgroundColor;
+    height: 100%;
+  }
+}
