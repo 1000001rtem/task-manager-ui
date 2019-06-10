@@ -9,7 +9,7 @@ class TitleView extends React.Component {
         return (
             <div className={"view"}>
                 <BrowserRouter>
-                    <Route path='/main' component={MainView}/>
+                    <Route path='/' component={MainView}/>
                     <Route path='/project' component={ProjectView}/>
                     <Route path='/task' component={TaskView}/>
                 </BrowserRouter>

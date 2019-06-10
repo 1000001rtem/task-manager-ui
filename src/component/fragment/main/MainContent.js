@@ -10,10 +10,12 @@ class MainContent extends React.Component {
                 <Container>
                     <div className={"greetingsContainer"}>
                         <div className={"greetingsBox"}>
-                            <h3>Welcome to Task Manager</h3>
-                        </div>
-                        <div className={"imageBox"}>
-                            <Image src="/image/titleLogo.png"/>
+                            <div>
+                                <h3>Welcome to Task Manager</h3>
+                            </div>
+                            <div className={"imageBox"}>
+                                <Image src="/image/titleLogo.png"/>
+                            </div>
                         </div>
                     </div>
                 </Container>
