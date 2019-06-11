@@ -1,6 +1,6 @@
 import * as React from "react";
-import axios from "axios";
 import ProjectContent from "../fragment/project/ProjectContent";
+import {projectActions} from "./project.actions";
 
 class ProjectContentContainer extends React.Component {
     constructor(props) {
@@ -11,14 +11,10 @@ class ProjectContentContainer extends React.Component {
     }
 
     componentDidMount() {
-        axios({
-            method: 'get',
-            url: 'http://127.0.0.1:80/api/project/findAll?userId=f299a6aa-8769-11e9-bc42-526af7764f64',
-        })
-            .then(res => {
-                const projects = res.data;
-                this.setState({projects});
-            });
+        projectActions.findAll().then(res => {
+            const projects = res;
+            this.setState({projects});
+        });
     }
 
     render() {
