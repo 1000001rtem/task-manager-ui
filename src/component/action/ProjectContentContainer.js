@@ -8,18 +8,23 @@ class ProjectContentContainer extends React.Component {
         this.state = {
             projects: []
         };
+        this.removeHandle = this.removeHandle.bind(this);
     }
 
     componentDidMount() {
         projectActions.findAll().then(res => {
-            const projects = res;
-            this.setState({projects});
+            this.setState({projects: res});
         });
+    }
+
+    removeHandle(projectId) {
+        projectActions.remove(projectId);
+        window.location.reload();
     }
 
     render() {
         return (
-            <ProjectContent projects={this.state.projects}/>
+            <ProjectContent projects={this.state.projects} removeHandle={this.removeHandle}/>
         )
     }
 }

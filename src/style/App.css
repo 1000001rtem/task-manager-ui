@@ -63,6 +63,18 @@ body {
     height: 100%;
 }
 
+.content .container .inputGroup {
+    padding-top: 30px;
+}
+
+.content .container .inputGroup .input-group-text {
+    width: 120px;
+}
+
+.content .container .inputGroup .react-datepicker-input {
+    height: 38px;
+}
+
 .content .container .loginBox {
     height: 100%;
     display: flex;

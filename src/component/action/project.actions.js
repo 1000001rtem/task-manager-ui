@@ -1,14 +1,16 @@
 import axiosInstance from "../../config/axiosConfig";
 
 export const projectActions = {
-    findAll
+    findAll,
+    remove,
+    findOne,
 };
 
 async function findAll() {
     const userId = localStorage.getItem('userId');
     let projects;
     await axiosInstance.get('project/findAll', {
-        handlerEnabled: false,
+        handlerEnabled: true,
         params: {
             userId: userId
         }
@@ -17,4 +19,27 @@ async function findAll() {
         return projects;
     });
     return await projects;
+}
+
+async function findOne(projectId) {
+    let project;
+    await axiosInstance.get('project/findOne', {
+        handlerEnabled: true,
+        params: {
+            projectId: projectId
+        }
+    }).then(res => {
+        project = res.data;
+        return project;
+    });
+    return await project;
+}
+
+function remove(projectId) {
+    axiosInstance.delete('project/delete', {
+        handlerEnabled: true,
+        params: {
+            projectId: projectId,
+        }
+    })
 }

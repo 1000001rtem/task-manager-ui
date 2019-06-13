@@ -1,8 +1,18 @@
 import * as React from "react";
 import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
+import {Link} from "react-router-dom";
 
 class ProjectContent extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick = (projectId) => {
+        this.props.removeHandle(projectId);
+    };
 
     render() {
         return (
@@ -24,11 +34,18 @@ class ProjectContent extends React.Component {
                             {this.props.projects.map((e, i) =>
                                 <tr>
                                     <td>{i + 1}</td>
-                                    <td>{e.name}</td>
+                                    <td>
+                                        <Link to={`/projectEdit/${e.id}`}>
+                                            {e.name}
+                                        </Link>
+                                    </td>
                                     <td>{e.description}</td>
                                     <td>{e.startDate}</td>
                                     <td>{e.endDate}</td>
                                     <td>{e.status}</td>
+                                    <td>
+                                        <Button onClick={() => this.handleClick(e.id)}>Delete</Button>
+                                    </td>
                                 </tr>
                             )}
                             </tbody>
