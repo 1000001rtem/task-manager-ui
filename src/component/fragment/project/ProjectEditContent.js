@@ -5,19 +5,18 @@ import ProjectInputGroup from "./ProjectInputGroup";
 class ProjectEditContent extends React.Component {
     constructor(props, context) {
         super(props, context);
-        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onChange(field, value) {
-        console.log(value);
-        this.props.onChange(field, value);
+    onSubmit(project) {
+        this.props.onSubmit(project);
     }
 
     render() {
         return (
             <div className={"content"}>
                 <Container>
-                    <ProjectInputGroup project={this.props.project} onChange={this.onChange}/>
+                    <ProjectInputGroup project={this.props.project} onSubmit={this.onSubmit}/>
                 </Container>
             </div>
         )

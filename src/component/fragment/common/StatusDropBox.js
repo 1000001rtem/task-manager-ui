@@ -6,11 +6,12 @@ class StatusDropBox extends React.Component {
         super(props, context);
         this.state = {
             selectedStatus: null
-        }
+        };
     }
 
     onSelect = (eventKey) => {
         this.setState({selectedStatus: eventKey});
+        this.props.onChange(eventKey);
     };
 
     render() {

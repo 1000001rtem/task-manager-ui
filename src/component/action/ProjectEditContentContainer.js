@@ -8,14 +8,13 @@ class ProjectEditContentContainer extends React.Component {
         this.state = {
             project: [],
         };
-        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
     }
 
-    onChange(field, value) {
-        console.log(value);
-        this.state.project[field] = value;
-        console.log(this.state);
+    onSubmit(project) {
+        project.userId = localStorage.getItem("userId");
+        projectActions.update(project);
     }
 
     componentDidMount() {
@@ -26,7 +25,7 @@ class ProjectEditContentContainer extends React.Component {
 
     render() {
         return (
-            <ProjectEditContent project={this.state.project} onChange={this.onChange}/>
+            <ProjectEditContent project={this.state.project} onSubmit={this.onSubmit}/>
         )
     }
 }

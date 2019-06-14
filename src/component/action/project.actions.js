@@ -1,10 +1,17 @@
 import axiosInstance from "../../config/axiosConfig";
 
 export const projectActions = {
+    update,
     findAll,
     remove,
     findOne,
 };
+
+async function update(project) {
+    await axiosInstance.put('project/update', project).then(res => {
+        console.log(res);
+    });
+}
 
 async function findAll() {
     const userId = localStorage.getItem('userId');
