@@ -27,7 +27,7 @@ class ProjectContent extends React.Component {
                                 <th>Description</th>
                                 <th>Start Date</th>
                                 <th>End Date</th>
-                                <th>Status Date</th>
+                                <th>Status</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -51,6 +51,7 @@ class ProjectContent extends React.Component {
                             </tbody>
                         </Table>
                     </div>
+                    <Button href={'/createProject'}>NEW</Button>
                 </Container>
             </div>
         )

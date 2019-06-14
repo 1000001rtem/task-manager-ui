@@ -1,8 +1,9 @@
 import * as React from "react";
 import Container from "react-bootstrap/Container";
 import ProjectEditInputGroup from "./ProjectEditInputGroup";
+import ProjectCreateInputGroup from "./ProjectCreateInputGroup";
 
-class ProjectEditContent extends React.Component {
+class ProjectCreateContent extends React.Component{
     constructor(props, context) {
         super(props, context);
         this.onSubmit = this.onSubmit.bind(this);
@@ -13,14 +14,14 @@ class ProjectEditContent extends React.Component {
     }
 
     render() {
-        return (
+        return(
             <div className={"content"}>
                 <Container>
-                    <ProjectEditInputGroup project={this.props.project} onSubmit={this.onSubmit}/>
+                    <ProjectCreateInputGroup onSubmit={this.onSubmit}/>
                 </Container>
             </div>
         )
     }
 }
 
-export default ProjectEditContent;
+export default ProjectCreateContent;

@@ -4,11 +4,16 @@ import NavLink from "react-bootstrap/NavLink";
 
 
 class RightMenu extends React.Component {
+
+    logout(){
+        localStorage.clear();
+    }
+
     render() {
         return (
             <div className={"rightMenu"}>
                 <Navbar>
-                    <NavLink>Logout</NavLink>
+                    <NavLink href={"/"} onClick={this.logout}>Logout</NavLink>
                 </Navbar>
             </div>
         )

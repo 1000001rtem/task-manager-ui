@@ -24,7 +24,8 @@ class LoginContent extends React.Component {
         e.preventDefault();
         const {login, password} = this.state;
         if (login && password) {
-            userActions.login(login, password);
+            userActions.login(login, password).then(
+                this.props.history.push('/main'));
         }
     }
 

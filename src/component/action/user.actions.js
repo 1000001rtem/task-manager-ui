@@ -5,7 +5,7 @@ export const userActions = {
     logout
 };
 
-function login(login, password) {
+async function login(login, password) {
     axiosInstance.post('auth', {
         handlerEnabled: false,
         login: login,

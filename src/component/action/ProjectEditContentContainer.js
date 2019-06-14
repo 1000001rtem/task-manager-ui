@@ -14,7 +14,7 @@ class ProjectEditContentContainer extends React.Component {
 
     onSubmit(project) {
         project.userId = localStorage.getItem("userId");
-        projectActions.update(project);
+        projectActions.update(project).then(this.props.history.push('/project'));
     }
 
     componentDidMount() {

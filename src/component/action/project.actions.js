@@ -1,11 +1,18 @@
 import axiosInstance from "../../config/axiosConfig";
 
 export const projectActions = {
+    create,
     update,
     findAll,
     remove,
     findOne,
 };
+
+async function create(project){
+    await axiosInstance.post('project/create', project).then(res=>{
+        console.log(res);
+    })
+}
 
 async function update(project) {
     await axiosInstance.put('project/update', project).then(res => {

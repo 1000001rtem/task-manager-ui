@@ -7,6 +7,7 @@ import ProjectContentContainer from "../action/ProjectContentContainer";
 import TaskContentContainer from "../action/TaskContentContainer";
 import LoginContent from "../fragment/login/LoginContent";
 import ProjectEditContentContainer from "../action/ProjectEditContentContainer";
+import ProjectCreateContentContainer from "../action/ProjectCreateContentContainer";
 
 class MainView extends React.Component {
 
@@ -19,6 +20,7 @@ class MainView extends React.Component {
                     <Route path='/project' component={ProjectContentContainer}/>
                     <Route path='/task' component={TaskContentContainer}/>
                     <Route path='/login' component={LoginContent}/>
+                    <Route path='/createProject' component={ProjectCreateContentContainer}/>
                     <Route path='/projectEdit/:projectId' component={ProjectEditContentContainer}/>
                 </BrowserRouter>
                 <Footer/>
