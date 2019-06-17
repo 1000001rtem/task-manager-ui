@@ -1,29 +1,35 @@
 import * as React from "react";
-import axios from "axios";
 import TaskContent from "../fragment/task/TaskContent";
+import {taskActions} from "./task.actions";
+import {projectActions} from "./project.actions";
 
 class TaskContentContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tasks: []
+            tasks: [],
+            projects: []
         };
     }
 
     componentDidMount() {
-        axios({
-            method: 'get',
-            url: 'http://127.0.0.1:80/api/task/findAll?userId=f299a6aa-8769-11e9-bc42-526af7764f64',
-        })
+        taskActions.findAll()
             .then(res => {
-                const tasks = res.data;
-                this.setState({tasks});
+                this.setState({tasks: res});
             });
+        projectActions.findAll().then(res => {
+            this.setState({projects: res});
+        });
+    }
+
+    removeHandle(taskId) {
+        taskActions.remove(taskId);
+        window.location.reload();
     }
 
     render() {
         return (
-            <TaskContent tasks={this.state.tasks}/>
+            <TaskContent tasks={this.state.tasks} removeHandle={this.removeHandle} projects={this.state.projects}/>
         )
     }
 }

@@ -4,12 +4,12 @@ export const projectActions = {
     create,
     update,
     findAll,
-    remove,
     findOne,
+    remove,
 };
 
-async function create(project){
-    await axiosInstance.post('project/create', project).then(res=>{
+async function create(project) {
+    await axiosInstance.post('project/create', project).then(res => {
         console.log(res);
     })
 }

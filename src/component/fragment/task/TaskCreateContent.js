@@ -1,26 +1,28 @@
-import * as React from "react";
+import React from "react";
+import TaskCreateInputGroup from "./TaskCreateInputGroup";
 import Container from "react-bootstrap/Container";
-import ProjectCreateInputGroup from "./ProjectCreateInputGroup";
 
-class ProjectCreateContent extends React.Component {
+class TaskCreateContent extends React.Component {
+
     constructor(props, context) {
         super(props, context);
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onSubmit(project) {
-        this.props.onSubmit(project);
+    onSubmit(task) {
+        this.props.onSubmit(task);
     }
 
     render() {
         return (
             <div className={"content"}>
                 <Container>
-                    <ProjectCreateInputGroup onSubmit={this.onSubmit}/>
+                    <TaskCreateInputGroup onSubmit={this.onSubmit}/>
                 </Container>
             </div>
         )
     }
+
 }
 
-export default ProjectCreateContent;
+export default TaskCreateContent;

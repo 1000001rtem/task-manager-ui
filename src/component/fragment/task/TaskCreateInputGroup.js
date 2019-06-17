@@ -4,13 +4,15 @@ import InputGroup from "react-bootstrap/InputGroup";
 import {FormControl} from "react-bootstrap";
 import {DatePickerInput} from "rc-datepicker";
 import Button from "react-bootstrap/Button";
+import ProjectDropBox from "../common/ProjectDropBox";
 
-class ProjectCreateInputGroup extends React.Component {
+class TaskCreateInputGroup extends React.Component {
 
     constructor(props, context) {
         super(props, context);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.changeProject = this.changeProject.bind(this);
     }
 
     handleChange(event) {
@@ -20,6 +22,10 @@ class ProjectCreateInputGroup extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.onSubmit(this.state);
+    }
+
+    changeProject(project) {
+        this.setState({projectId: project});
     }
 
     render() {
@@ -33,7 +39,7 @@ class ProjectCreateInputGroup extends React.Component {
                         <FormControl
                             name={'name'}
                             onChange={this.handleChange}
-                            placeHolder={'Project Name'}
+                            placeHolder={'Task Name'}
                             aria-label="Default"
                             aria-describedby="inputGroup-sizing-default"
                         />
@@ -45,7 +51,7 @@ class ProjectCreateInputGroup extends React.Component {
                         <FormControl
                             name={'description'}
                             onChange={this.handleChange}
-                            placeHolder={'Project Description'}
+                            placeHolder={'Task Description'}
                             aria-label="Default"
                             aria-describedby="inputGroup-sizing-default"
                         />
@@ -74,12 +80,15 @@ class ProjectCreateInputGroup extends React.Component {
                             className='my-custom-datepicker-component'
                         />
                     </InputGroup>
+                    <ProjectDropBox onChange={this.changeProject}/>
                     <br/>
                     <Button type={"submit"}>SAVE</Button>
                 </Form>
             </div>
         )
     }
+
+
 }
 
-export default ProjectCreateInputGroup;
+export default TaskCreateInputGroup;

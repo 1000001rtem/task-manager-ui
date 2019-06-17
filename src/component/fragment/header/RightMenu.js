@@ -5,7 +5,7 @@ import NavLink from "react-bootstrap/NavLink";
 
 class RightMenu extends React.Component {
 
-    logout(){
+    logout() {
         localStorage.clear();
     }
 

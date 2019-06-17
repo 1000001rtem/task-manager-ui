@@ -2,7 +2,7 @@ import * as React from "react";
 import ProjectCreateContent from "../fragment/project/ProjectCreateContent";
 import {projectActions} from "./project.actions";
 
-class ProjectCreateContentContainer extends React.Component{
+class ProjectCreateContentContainer extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.onSubmit = this.onSubmit.bind(this);
@@ -15,7 +15,7 @@ class ProjectCreateContentContainer extends React.Component{
     }
 
     render() {
-        return(
+        return (
             <ProjectCreateContent onSubmit={this.onSubmit}/>
         )
     }

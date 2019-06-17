@@ -2,6 +2,7 @@ import * as React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
 class StatusDropBox extends React.Component {
+
     constructor(props, context) {
         super(props, context);
         this.state = {
@@ -30,6 +31,7 @@ class StatusDropBox extends React.Component {
             </Dropdown>
         )
     }
+
 }
 
 const statuses = [
