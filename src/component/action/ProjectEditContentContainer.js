@@ -3,6 +3,7 @@ import {projectActions} from "./project.actions";
 import ProjectEditContent from "../fragment/project/ProjectEditContent";
 
 class ProjectEditContentContainer extends React.Component {
+
     constructor(props, context) {
         super(props, context);
         this.state = {
@@ -28,6 +29,7 @@ class ProjectEditContentContainer extends React.Component {
             <ProjectEditContent project={this.state.project} onSubmit={this.onSubmit}/>
         )
     }
+
 }
 
 export default ProjectEditContentContainer;

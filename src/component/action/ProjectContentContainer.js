@@ -3,6 +3,7 @@ import ProjectContent from "../fragment/project/ProjectContent";
 import {projectActions} from "./project.actions";
 
 class ProjectContentContainer extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -27,6 +28,7 @@ class ProjectContentContainer extends React.Component {
             <ProjectContent projects={this.state.projects} removeHandle={this.removeHandle}/>
         )
     }
+
 }
 
 export default ProjectContentContainer;

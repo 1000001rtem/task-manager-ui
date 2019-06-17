@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import {userActions} from "../../action/user.actions";
 
 class LoginContent extends React.Component {
+
     constructor(props) {
         super(props);
         userActions.logout();
@@ -53,6 +54,7 @@ class LoginContent extends React.Component {
             </div>
         )
     }
+
 }
 
 export default LoginContent;

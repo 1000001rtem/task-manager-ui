@@ -14,6 +14,7 @@ class TaskView extends React.Component {
             </div>
         )
     }
+
 }
 
 export default TaskView;

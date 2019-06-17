@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavLink from "react-bootstrap/NavLink";
 
 class LeftMenu extends React.Component {
+
     render() {
         return (
             <div className={"leftMenu"}>
@@ -14,6 +15,7 @@ class LeftMenu extends React.Component {
             </div>
         )
     }
+
 }
 
 export default LeftMenu;

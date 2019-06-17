@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 
 class ProjectContent extends React.Component {
+
     constructor(props, context) {
         super(props, context);
         this.handleClick = this.handleClick.bind(this);

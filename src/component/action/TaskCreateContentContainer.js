@@ -21,6 +21,7 @@ class TaskCreateContentContainer extends React.Component {
             <TaskCreateContent onSubmit={this.onSubmit}/>
         )
     }
+
 }
 
 export default TaskCreateContentContainer;

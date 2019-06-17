@@ -14,6 +14,7 @@ class ProjectView extends React.Component {
             </div>
         )
     }
+
 }
 
 export default ProjectView;

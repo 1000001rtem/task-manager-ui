@@ -4,7 +4,8 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 
 class TaskContent extends React.Component {
-    constructor(props, context, handleClick) {
+
+    constructor(props, context) {
         super(props, context);
         this.handleClick = this.handleClick.bind(this);
         this.getProject = this.getProject.bind(this);
@@ -63,6 +64,7 @@ class TaskContent extends React.Component {
             </div>
         )
     }
+
 }
 
 export default TaskContent;

@@ -8,6 +8,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 class ProjectEditInputGroup extends React.Component {
+
     constructor(props, context) {
         super(props, context);
         this.state = {
@@ -137,6 +138,7 @@ class ProjectEditInputGroup extends React.Component {
             </div>
         )
     }
+
 }
 
 export default ProjectEditInputGroup;

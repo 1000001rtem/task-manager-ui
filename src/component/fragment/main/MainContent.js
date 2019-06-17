@@ -22,6 +22,7 @@ class MainContent extends React.Component {
             </div>
         )
     }
+
 }
 
 export default MainContent;

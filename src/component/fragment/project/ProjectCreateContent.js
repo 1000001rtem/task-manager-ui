@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import ProjectCreateInputGroup from "./ProjectCreateInputGroup";
 
 class ProjectCreateContent extends React.Component {
+
     constructor(props, context) {
         super(props, context);
         this.onSubmit = this.onSubmit.bind(this);
@@ -21,6 +22,7 @@ class ProjectCreateContent extends React.Component {
             </div>
         )
     }
+
 }
 
 export default ProjectCreateContent;

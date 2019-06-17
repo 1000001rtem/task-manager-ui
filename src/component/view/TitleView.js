@@ -5,6 +5,7 @@ import ProjectView from "./ProjectView";
 import TaskView from "./TaskView";
 
 class TitleView extends React.Component {
+
     render() {
         return (
             <div className={"view"}>
@@ -16,6 +17,7 @@ class TitleView extends React.Component {
             </div>
         )
     }
+
 }
 
 export default TitleView;

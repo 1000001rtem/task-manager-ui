@@ -29,6 +29,7 @@ class MainView extends React.Component {
             </div>
         )
     }
+
 }
 
 export default MainView;

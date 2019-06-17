@@ -4,6 +4,7 @@ import {taskActions} from "./task.actions";
 import {projectActions} from "./project.actions";
 
 class TaskContentContainer extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -32,6 +33,7 @@ class TaskContentContainer extends React.Component {
             <TaskContent tasks={this.state.tasks} removeHandle={this.removeHandle} projects={this.state.projects}/>
         )
     }
+
 }
 
 export default TaskContentContainer;

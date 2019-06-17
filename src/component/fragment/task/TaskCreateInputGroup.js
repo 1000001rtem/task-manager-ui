@@ -88,7 +88,6 @@ class TaskCreateInputGroup extends React.Component {
         )
     }
 
-
 }
 
 export default TaskCreateInputGroup;
