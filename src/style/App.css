@@ -67,6 +67,14 @@ body {
     padding-top: 30px;
 }
 
+.content .container .inputGroup .dropBoxContainer {
+    display: flex;
+}
+
+.content .container .inputGroup .dropBoxContainer .dropdown {
+    margin: 0 5px 0 5px;
+}
+
 .content .container .inputGroup .input-group-text {
     width: 120px;
 }

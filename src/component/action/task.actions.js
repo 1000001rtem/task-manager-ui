@@ -37,7 +37,11 @@ async function findAll() {
 
 async function findOne(taskId) {
     let task;
-    await axiosInstance.get('task/findOne', taskId).then(res => {
+    await axiosInstance.get('task/findOne', {
+        params: {
+            taskId: taskId,
+        }
+    }).then(res => {
         task = res.data;
         return task;
     });

@@ -2,6 +2,7 @@ import * as React from "react";
 import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import {Link} from "react-router-dom";
 
 class TaskContent extends React.Component {
 
@@ -45,7 +46,11 @@ class TaskContent extends React.Component {
                             {this.props.tasks.map((e, i) =>
                                 <tr>
                                     <td>{i + 1}</td>
-                                    <td>{e.name}</td>
+                                    <td>
+                                        <Link to={`/taskEdit/${e.id}`}>
+                                            {e.name}
+                                        </Link>
+                                    </td>
                                     <td>{e.description}</td>
                                     <td>{e.startDate}</td>
                                     <td>{e.endDate}</td>
