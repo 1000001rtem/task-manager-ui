@@ -1,6 +1,6 @@
 import * as React from "react";
-import ProjectContent from "../fragment/project/ProjectContent";
-import {projectActions} from "./project.actions";
+import ProjectContent from "../../fragment/project/ProjectContent";
+import {projectActions} from "../../../action/project.actions";
 
 class ProjectContentContainer extends React.Component {
 

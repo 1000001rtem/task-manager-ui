@@ -134,10 +134,21 @@ body {
 
     .greetingsContainer {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: inherit;
       width: 100%;
+
+      .buttonBox {
+        margin: 30px;
+
+        a {
+          margin: 10px;
+          background-color: @headerBackgroundColor;
+          border-color: @headerBackgroundColor;
+        }
+      }
 
       .imageBox {
         display: flex;

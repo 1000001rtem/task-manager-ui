@@ -1,6 +1,6 @@
 import * as React from "react";
-import {projectActions} from "./project.actions";
-import ProjectEditContent from "../fragment/project/ProjectEditContent";
+import {projectActions} from "../../../action/project.actions";
+import ProjectEditContent from "../../fragment/project/ProjectEditContent";
 
 class ProjectEditContentContainer extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
-import {projectActions} from "../../action/project.actions";
+import {projectActions} from "../../../action/project.actions";
 
 class ProjectDropBox extends React.Component {
 

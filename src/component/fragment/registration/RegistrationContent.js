@@ -1,9 +1,8 @@
-import * as React from "react";
-import Container from "react-bootstrap/Container";
 import {userActions} from "../../../action/user.actions";
-import Alert from "react-bootstrap/Alert";
+import Container from "react-bootstrap/Container";
+import * as React from "react";
 
-class LoginContent extends React.Component {
+class RegistrationContent extends React.Component {
 
     constructor(props) {
         super(props);
@@ -11,13 +10,9 @@ class LoginContent extends React.Component {
         this.state = {
             login: '',
             password: '',
-            show: false,
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleDismiss = this.handleDismiss.bind(this);
-        this.handleShow = this.handleShow.bind(this);
-        this.alertHandler = this.alertHandler.bind(this);
     }
 
     handleChange(e) {
@@ -26,34 +21,13 @@ class LoginContent extends React.Component {
         this.setState({[name]: value});
     }
 
-    handleDismiss = () => this.setState({show: false});
-    handleShow = () => this.setState({show: true});
-
     handleSubmit(e) {
         e.preventDefault();
         const {login, password} = this.state;
         if (login && password) {
-            userActions.login(login, password).then(res => {
-                    console.log();
-                    if (localStorage.getItem("userId")) {
-                        this.props.history.push('/main');
-                        window.location.reload();
-                    } else {
-                        this.handleShow();
-                    }
-                }
-            )
-        }
-    }
-
-    alertHandler() {
-        if (this.state.show) {
-            return <Alert variant="danger" onClose={this.handleDismiss} dismissible>
-                <Alert.Heading>Error</Alert.Heading>
-                <p>
-                    Wrong Login or Password;
-                </p>
-            </Alert>
+            userActions.registration(login, password).then(res => {
+                this.props.history.push('/');
+            })
         }
     }
 
@@ -62,10 +36,9 @@ class LoginContent extends React.Component {
         return (
             <div className={"content"}>
                 <Container>
-                    {this.alertHandler()}
                     <div className={"loginBox"}>
                         <form className="form-signin" onSubmit={this.handleSubmit}>
-                            <h2 className="form-signin-heading">Please login</h2>
+                            <h2 className="form-signin-heading">Registration</h2>
                             <input type="text" className="form-control" name="login" value={login}
                                    placeholder="Login"
                                    required=""
@@ -75,7 +48,7 @@ class LoginContent extends React.Component {
                                    placeholder="Password"
                                    required=""
                                    onChange={this.handleChange}/>
-                            <button className="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                            <button className="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
                         </form>
                     </div>
                 </Container>
@@ -85,4 +58,4 @@ class LoginContent extends React.Component {
 
 }
 
-export default LoginContent;
+export default RegistrationContent;

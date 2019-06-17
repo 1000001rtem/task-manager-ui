@@ -5,13 +5,26 @@ import RightMenu from "./RightMenu";
 
 class Header extends React.Component {
 
+    constructor(props, context) {
+        super(props, context);
+        this.authorization = this.authorization.bind(this);
+    }
+
+    authorization() {
+        if (localStorage.getItem('userId')) {
+            return <div className={"menuPanel"}>
+                <LeftMenu/>
+                <RightMenu/>
+            </div>
+        }
+    }
+
     render() {
         return (
             <div className={"header"}>
                 <Container>
                     <div className={"menuPanel"}>
-                        <LeftMenu/>
-                        <RightMenu/>
+                        {this.authorization()}
                     </div>
                 </Container>
             </div>

@@ -1,6 +1,6 @@
 import * as React from "react";
-import {taskActions} from "./task.actions";
-import TaskEditContent from "../fragment/task/TaskEditContent";
+import {taskActions} from "../../../action/task.actions";
+import TaskEditContent from "../../fragment/task/TaskEditContent";
 
 class TaskEditContentContainer extends React.Component {
 
